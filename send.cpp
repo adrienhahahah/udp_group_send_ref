@@ -33,6 +33,7 @@ int main(int argc,char *argv[])
 		memset(buf, 0, sizeof(buf));  
 																
 		length=sendto(socked,buf,strlen(buf),0,(struct sockaddr *)&remote_addr,sizeof(remote_addr));
+                sleep(2);
 		printf("Send Message%s\n",buf);
 	}
 	close(socked);
